@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.AmosManneschmidt.radar</string>
+	<key>category</key>
+	<string>Internet</string>
+	<key>connections</key>
+	<dict>
+		<key>0D9F5613-683F-49DB-B49E-5F88265DB8B9</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>5C4D14E6-3B82-4AE8-B060-A9A8F2D8051D</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>2426767B-03D4-4F18-A245-35936E7C51CA</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>962D31FD-39DE-45EC-8741-94A70676AC77</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>3DC1627A-A87F-4BA0-BC17-774839EAD576</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>6503AE51-31CD-47DD-B56C-AC7F581D4A1A</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>4779C5D1-797F-480B-83EE-D011965A57AF</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>6F721FAC-EFCF-435A-824F-C12691C99D09</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>A2C53D83-86E3-4280-95B0-C4180DF9659C</string>
+				<key>modifiers</key>
+				<integer>524288</integer>
+				<key>modifiersubtext</key>
+				<string>Configure with manually set weather station ID from workflow env vars</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>5C4D14E6-3B82-4AE8-B060-A9A8F2D8051D</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>9A835510-CBDB-4A14-ACF7-0B015F376BED</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>6F721FAC-EFCF-435A-824F-C12691C99D09</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>DFCB4AEC-D922-400A-9F71-BC9CB6534E29</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>9A835510-CBDB-4A14-ACF7-0B015F376BED</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>3DC1627A-A87F-4BA0-BC17-774839EAD576</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>2426767B-03D4-4F18-A245-35936E7C51CA</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>A2C53D83-86E3-4280-95B0-C4180DF9659C</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>9A835510-CBDB-4A14-ACF7-0B015F376BED</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>DFCB4AEC-D922-400A-9F71-BC9CB6534E29</key>
+		<array/>
+	</dict>
+	<key>createdby</key>
+	<string>Amos Manneschmidt (@amoose136)</string>
+	<key>description</key>
+	<string>Shows current radar</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Radar</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>/usr/bin/python radar.py $1
+cd static
+rm lg.gif rd.gif wn.gif
+rm "radar static.gif"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>radar.py</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>DFCB4AEC-D922-400A-9F71-BC9CB6534E29</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>radar</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Energizing ray tube...</string>
+				<key>script</key>
+				<string>/usr/bin/python update.py "$@"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Download latest NOAA radar images</string>
+				<key>title</key>
+				<string>Radar</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>4779C5D1-797F-480B-83EE-D011965A57AF</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{var:ws}</string>
+				<key>variables</key>
+				<dict/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>6F721FAC-EFCF-435A-824F-C12691C99D09</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{var:ws}</string>
+				<key>variables</key>
+				<dict/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>A2C53D83-86E3-4280-95B0-C4180DF9659C</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>No nearby NOAA radar station found</string>
+				<key>title</key>
+				<string>Error</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>6503AE51-31CD-47DD-B56C-AC7F581D4A1A</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{query}</string>
+				<key>matchcasesensitive</key>
+				<false/>
+				<key>matchmode</key>
+				<integer>2</integer>
+				<key>matchstring</key>
+				<string>^((?!([A-Z]{3})).)*$</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>3DC1627A-A87F-4BA0-BC17-774839EAD576</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>radar</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>//Shamelessly stolen from David Ferguson's wonderful weather workflow. Why reinvent the wheel? The code below is slightly changed from original state. The other items in this workflow are my original work.
+require_once('workflows.php');
+$w = new Workflows();
+
+$query = urlencode( "{query}" );
+$url = "http://autocomplete.wunderground.com/aq?query=$query&amp;format=json";
+$suggestions = $w-&gt;request( $url );
+$suggestions = json_decode( $suggestions );
+$results = array();
+foreach( $suggestions-&gt;RESULTS as $suggest ):
+	$w-&gt;result( $suggest-&gt;lat .' '. $suggest-&gt;lon, $suggest-&gt;lat .' '. $suggest-&gt;lon, $suggest-&gt;name , 'Country: '. $suggest-&gt;c .'. Timezone: '. $suggest-&gt;tz, 'icon.png' );
+endforeach;
+
+if ( count( $w-&gt;results() ) == 0 ):
+	$w-&gt;result( 'weather', 'na', 'No locations found', 'No locations were found that match your query', 'test2', 'icon.png', 'no' );
+endif;	
+
+echo $w-&gt;toxml();</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string></string>
+				<key>type</key>
+				<integer>1</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>0D9F5613-683F-49DB-B49E-5F88265DB8B9</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>100</integer>
+				<key>script</key>
+				<string>import urllib2, json, sys, os
+from subprocess import call
+
+[lat,lon] = "{query}".split(' ')
+data = urllib2.urlopen("http://forecast.weather.gov/MapClick.php?lat=" + lat + "&amp;lon=" + lon + "&amp;FcstType=json")
+ws = json.load(data)['location']['radar'].rstrip() #ws = Weather Station
+ws = ws[-3:]
+sys.stdout.write('{\"alfredworkflow\":{\"arg\": "'+ws+'","variables":{"ws": "'+ws+'"}}}')
+call('/usr/libexec/PlistBuddy -c "Set :variables:ws \"'+ws+'\"" info.plist', shell=True)</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>3</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>5C4D14E6-3B82-4AE8-B060-A9A8F2D8051D</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>/usr/bin/python config.py $1
+cd static
+rm 1.gif 2.gif 3.gif r.gif</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>9A835510-CBDB-4A14-ACF7-0B015F376BED</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string></string>
+				<key>title</key>
+				<string>Weather Station set to {query}</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>962D31FD-39DE-45EC-8741-94A70676AC77</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{query}</string>
+				<key>matchcasesensitive</key>
+				<false/>
+				<key>matchmode</key>
+				<integer>2</integer>
+				<key>matchstring</key>
+				<string>^[A-Z]{3}$</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>2426767B-03D4-4F18-A245-35936E7C51CA</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string>Hopefully Alfred 3 will provide a better way to do this but for now this workflow pipes a radar image from noaa’s servers to a temporary location and then it is fed into qlmanage to show a preview of it.
+
+Clipart for icon was made by user mola in inkscape and was found at https://openclipart.org/detail/79399/radar
+
+Location information shamelessly stolen from David Ferguson's wonderful weather workflow. Why reinvent the wheel? Autocompletion made possible by weatherunderground's servers.
+
+If for whatever reason the workflow chooses the wrong weather station and you know the right one you can manually override it by typing radar[alt][enter]
+
+Uses Dean Jackson's Alfred-Workflow python library.
+Uses David Ferguson's Workflow php library.</string>
+	<key>uidata</key>
+	<dict>
+		<key>0D9F5613-683F-49DB-B49E-5F88265DB8B9</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>5</integer>
+			<key>note</key>
+			<string>configure</string>
+			<key>xpos</key>
+			<integer>160</integer>
+			<key>ypos</key>
+			<integer>320</integer>
+		</dict>
+		<key>2426767B-03D4-4F18-A245-35936E7C51CA</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>5</integer>
+			<key>xpos</key>
+			<integer>670</integer>
+			<key>ypos</key>
+			<integer>390</integer>
+		</dict>
+		<key>3DC1627A-A87F-4BA0-BC17-774839EAD576</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>1</integer>
+			<key>note</key>
+			<string>Not of the regex below</string>
+			<key>xpos</key>
+			<integer>670</integer>
+			<key>ypos</key>
+			<integer>310</integer>
+		</dict>
+		<key>4779C5D1-797F-480B-83EE-D011965A57AF</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>5</integer>
+			<key>xpos</key>
+			<integer>160</integer>
+			<key>ypos</key>
+			<integer>170</integer>
+		</dict>
+		<key>5C4D14E6-3B82-4AE8-B060-A9A8F2D8051D</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>5</integer>
+			<key>note</key>
+			<string>Converts a Latitude and Longitude to weather station name</string>
+			<key>xpos</key>
+			<integer>320</integer>
+			<key>ypos</key>
+			<integer>320</integer>
+		</dict>
+		<key>6503AE51-31CD-47DD-B56C-AC7F581D4A1A</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>1</integer>
+			<key>xpos</key>
+			<integer>780</integer>
+			<key>ypos</key>
+			<integer>260</integer>
+		</dict>
+		<key>6F721FAC-EFCF-435A-824F-C12691C99D09</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>5</integer>
+			<key>xpos</key>
+			<integer>390</integer>
+			<key>ypos</key>
+			<integer>200</integer>
+		</dict>
+		<key>962D31FD-39DE-45EC-8741-94A70676AC77</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>5</integer>
+			<key>xpos</key>
+			<integer>780</integer>
+			<key>ypos</key>
+			<integer>380</integer>
+		</dict>
+		<key>9A835510-CBDB-4A14-ACF7-0B015F376BED</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>5</integer>
+			<key>note</key>
+			<string>Save the persistant overlay and background files</string>
+			<key>xpos</key>
+			<integer>500</integer>
+			<key>ypos</key>
+			<integer>320</integer>
+		</dict>
+		<key>A2C53D83-86E3-4280-95B0-C4180DF9659C</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>5</integer>
+			<key>xpos</key>
+			<integer>390</integer>
+			<key>ypos</key>
+			<integer>260</integer>
+		</dict>
+		<key>DFCB4AEC-D922-400A-9F71-BC9CB6534E29</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>5</integer>
+			<key>note</key>
+			<string>Download and display latest radar</string>
+			<key>xpos</key>
+			<integer>500</integer>
+			<key>ypos</key>
+			<integer>170</integer>
+		</dict>
+	</dict>
+	<key>variables</key>
+	<dict>
+		<key>ws</key>
+		<string>MRX</string>
+	</dict>
+	<key>variablesdontexport</key>
+	<array>
+		<string>ws</string>
+	</array>
+	<key>version</key>
+	<string>0.9.0</string>
+	<key>webaddress</key>
+	<string></string>
+</dict>
+</plist>
